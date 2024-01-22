@@ -15,7 +15,7 @@ const firCode = Fira_Code({
 
 
 export default function Home() {
-    const {days, minutes, seconds, hours} = useCountdown('2023-11-26T19:00:00')
+    const {days, minutes, seconds, hours} = useCountdown('2024-03-03T13:00:00')
     const {width, height} = useWindowSize();
     const [pageHeight, setPageHeight] = useState(height);
 
@@ -91,7 +91,7 @@ export default function Home() {
                         </div>
 
                     </div>
-                    <a href={'https://maps.app.goo.gl/6eo4yRHu5LFSUoBg7'} target={'_blank'}>
+                    <a href={'https://maps.app.goo.gl/qxhqRqmcsHw1EGJR6'} target={'_blank'}>
                         <button style={{
                             backgroundColor: 'transparent',
                             color: 'white',

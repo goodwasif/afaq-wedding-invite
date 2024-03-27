@@ -15,7 +15,7 @@
 }
 
 .text {
- font-size: xx-large;
+ font-size: 30px;
 }
 
 @media (max-width: 1260px) {
@@ -24,15 +24,13 @@
         justify-content: center;
         align-items: center;
         padding: 0;
+        gap: 30px;
     }
-
-
     .img {
         width: 96%;
         height: auto;
-        margin-top: 50%;
+        margin-top: 10%;
     }
-
     .text {
      font-size: 20px;
     }

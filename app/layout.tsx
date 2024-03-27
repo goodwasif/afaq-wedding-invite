@@ -3,7 +3,7 @@ import './globals.css'
 
 
 export const metadata: Metadata = {
-  title: "Mohsin's Wedding Invitation",
+  title: "Afaq Ghauri's Wedding Invitation",
   description: '',
 }
 

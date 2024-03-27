@@ -1,11 +1,11 @@
 "use client";
-import Image from 'next/image'
+
 import styles from './page.module.css'
-import {useCountdown} from "@/hooks/useCountdown";
-import {Crimson_Text, Montserrat, Fira_Code} from 'next/font/google'
+import { useCountdown } from "@/hooks/useCountdown";
+import { Fira_Code } from 'next/font/google'
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 const firCode = Fira_Code({
     weight: ['400', '700'],
@@ -13,10 +13,9 @@ const firCode = Fira_Code({
     display: 'swap',
 })
 
-
 export default function Home() {
-    const {days, minutes, seconds, hours} = useCountdown('2024-03-03T13:00:00')
-    const {width, height} = useWindowSize();
+    const { days, minutes, seconds, hours } = useCountdown('2024-04-20T13:00:00')
+    const { width, height } = useWindowSize();
     const [pageHeight, setPageHeight] = useState(height);
 
     useEffect(() => {
@@ -35,28 +34,17 @@ export default function Home() {
 
     return (
         <>
-
-            <Confetti
-                width={width}
-                height={pageHeight}
-                style={{position: "fixed"}}
-            />
+            <Confetti width={width} height={pageHeight} style={{ position: "fixed" }} />
             <main className={styles.main}>
+                <img className={styles.img} alt={'Afaq Ghauri Card'} src='/afaq-card.png' />
+                <div style={{ width: '96%' }}>
+                    <h1 className={firCode.className} style={{ fontWeight: 700, fontSize: '36px' }}>Time Left</h1>
 
-
-                <img className={styles.img} alt={''} src='/card.jpeg'
-
-                />
-                <div style={{width: '96%'}}  >
-                    <h1 className={firCode.className} style={{fontWeight: 700, fontSize: '36px'}}>Time Left</h1>
-
-                    <div
-                        className={styles.text}
-                         style={{display: 'flex', gap: '20px', marginTop: '0.4rem'}}>
+                    <div className={styles.text} style={{ display: 'flex', gap: '20px', marginTop: '0.4rem' }}>
                         <div style={{
                             display: 'flex',
                             flexDirection: 'column',
-                            alignItems: 'center',
+                            alignItems: 'flex-start',
                             justifyContent: 'center'
                         }}>
                             <h2 className={firCode.className}>{days}</h2>
@@ -91,13 +79,13 @@ export default function Home() {
                         </div>
 
                     </div>
-                    <a href={'https://maps.app.goo.gl/qxhqRqmcsHw1EGJR6'} target={'_blank'}>
+                    <a href={'https://maps.app.goo.gl/KCu15oyLgDxLSWk78'} target={'_blank'}>
                         <button style={{
                             backgroundColor: 'transparent',
                             color: 'white',
                             padding: '10px 20px',
                             border: 'solid 1px white',
-                            borderRadius: '25px',
+                            // borderRadius: '25px',
                             marginTop: '2rem',
                             cursor: 'pointer',
                             fontSize: '1.6rem',
@@ -108,8 +96,8 @@ export default function Home() {
 
                         }} className={firCode.className}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                 height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
-                                 strokeLinecap="round" strokeLinejoin="round">
+                                height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
+                                strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                 <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
                                 <path
@@ -121,6 +109,5 @@ export default function Home() {
                 </div>
             </main>
         </>
-
     )
 }
